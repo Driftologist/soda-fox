@@ -1,0 +1,205 @@
+//    The MIT License (MIT)
+
+//    Original work Copyright © 2015 Michael Burson <michael@driftdesign.co.yk> 
+//    (http://driftdesign.co.uk)
+//
+//    Permission is hereby granted, free of charge, to any person obtaining a copy
+//    of this software and associated documentation files (the "Software"), to deal
+//    in the Software without restriction, including without limitation the rights
+//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//    copies of the Software, and to permit persons to whom the Software is furnished
+//    to do so, subject to the following conditions:
+//
+//    The above copyright notice and this permission notice shall be included in
+//    all copies or substantial portions of the Software.
+//
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//    THE SOFTWARE.
+
+@font-face {}
+@media screen and (max-width 500px) {}
+
+/* cm-keyword        : var, function, !important */
+/* cm-tag            : HTML elements */
+/* cm-variable       : $, i */
+.cm-keyword, .cm-tag, .cm-variable { color: #f926b0; }
+
+/* cm-bracket        : html < </ > */
+.cm-bracket { color: #26f1f9; }
+
+/* cm-atom           : #id */
+/* cm-number         : property values */
+.cm-number, .cm-atom, .cm-string-2 { color: #fff844; }
+
+/* cm-number         : number, boolens */
+.cm-m-javascript.cm-number { color: #ff4444; }
+
+/* cm-attribute      : class="" id="" */
+.cm-m-javascript.cm-variable, .cm-attribute { color: #ffffff; }
+
+/* cm-variable-3     : :after */
+/* cm-operator       : js operators, CSS colons */
+.cm-variable-3 { color: #b2b4f0; }
+.cm-operator { color: #db89f4; }
+
+/* cm-qualifier      : .box */
+/* cm-meta           : @font-face */
+/* cm-builtin        : define, substr, const */
+/* cm-property       : getElementbyId, CSS properties */
+.cm-qualifier, .cm-builtin, .cm-meta, .cm-property { color: #38e0ff; }
+
+/* cm-string         : "string" */
+.cm-string { color: #ff8000; }
+
+/* cm-string-2       : some CSS values */
+.cm-string-2 { color: #ff8000; }
+
+/* cm-variable-2     : for key in [this], Markdown li */
+.cm-variable-2 { color: #e9fa18; }
+
+/* cm-comment        : // comments */
+.cm-comment { color: #8c8c8c; }
+
+/* cm-def            : @include, [this] */
+.cm-def, .cm-m-xml.cm-string, .cm-m-css.cm-property { color: #24e22b; }
+
+/* cm-matchhighlight : Match Highlighter (https://github.com/gintau/bracket-match-highlighter) */
+.cm-matchhighlight { background-color: #333; }
+
+/* cm-error          : color : #4444; */
+.cm-error { color: #dc322f; }
+
+.CodeMirror, .CodeMirror-scroll {
+    background-color: #030517;
+    color: #F8F8F2;
+}
+
+.CodeMirror-gutters {
+    background-color: #101010;
+    color: #000;
+}
+.CodeMirror-code div:nth-child(odd) .CodeMirror-gutter-wrapper {
+    background-color: #202029;
+}
+
+.CodeMirror-linenumber { color: #767676; }
+
+.CodeMirror-focused .CodeMirror-activeline-background,
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt,
+.inline-widget .CodeMirror-gutter-elt { 
+    background: #3C3F41;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt { color: #F8F8F2; }
+
+.CodeMirror-cursor { border-left: 1px solid #F8F8F2 !important; }
+
+.CodeMirror-selected {
+  background: #3C3F41;
+  opacity: .23;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+  background-color: #E6DB74;
+  color: #242424;
+}
+
+.CodeMirror-matchingbracket {
+  background-color: transparent !important;
+  color: #1dff00 !important;
+  text-shadow: 0 0 10px #1dff00;
+  font-weight: bold;
+}
+
+.CodeMirror-nonmatchingbracket {
+  background-color: transparent !important;
+  color: #f00 !important;
+  text-shadow: 0 0 10px #f00;
+  font-weight: bold;
+}
+
+.CodeMirror-matchingtag { background: rgba(255,255,255,0.15); }
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+  border-left: none !important;
+  border-bottom: 1px solid #F8F8F2;
+}
+
+.CodeMirror-searching {
+  background-color: #E6DB74;
+}
+
+.searching-current-match {
+  background-color: #FD971F;
+}
+
+.CodeMirror-foldgutter-open:after {
+  content: "\2335";
+  font-size: 1.3em;
+  color: #767676;
+}
+
+.CodeMirror-foldgutter-folded:after {
+    content: "+";
+    font-size: 1.3em;
+    font-weight: bold;
+    background-color: transparent !important;
+    color: #1dff00 !important;
+    text-shadow: 0 0 10px #1dff00;
+}
+
+.CodeMirror-foldgutter-folded { padding-top: 2px; }
+
+.CodeMirror-foldgutter-open { padding-top: 1px; }
+
+.CodeMirror-foldmarker {
+  display: inline-block;
+  border-radius: 0.75em;
+  padding: 0 2px 0 2px;
+  border: 0;
+  font-size: 0.75em;
+  color: #1dff00 !important;
+  text-shadow: 0 0 10px #1dff00;
+  background-color: rgba(255, 255, 255, (1 / 6));
+
+  &::after {
+    content: '\2022\2022\2022';
+    position: relative;
+    top: 1px;
+  }
+}
+
+/* Extensions */
+
+/**
+* Brackets Css Color Preview (https://github.com/cmgddd/Brackets-css-color-preview)
+* ---------------------------------------------------------------------------------
+*/
+
+.ico-cssColorPreview {
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  margin-bottom: 2px;
+}
+
+/**
+* Brackets Git (https://github.com/zaggino/brackets-git)
+* ---------------------------------------------------------------------------------
+*/
+
+.brackets-git-gutter-modified, .brackets-git-gutter-removed, .brackets-git-gutter-added { width: 3px; }
+
+/**
+* Interactive Linter (https://github.com/MiguelCastillo/Brackets-InteractiveLinter)
+*----------------------------------*----------------------------------*----------------------------------
+*/
+// Doesn't work at the moment
+.CodeMirror *[class*="interactive-linter-w"] {
+    border-bottom: 2px dashed #ff5800 !important;
+}
