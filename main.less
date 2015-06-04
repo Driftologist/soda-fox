@@ -21,61 +21,98 @@
 //    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //    THE SOFTWARE.
 
+// This area is a test to see the effects of the css/less styles
+// --------------------------------------------------------------------
 @font-face {}
 @media screen and (max-width 500px) {}
+// --------------------------------------------------------------------
+// end test area
+// --------------------------------------------------------------------
+
+@red: #ff4444;
+@blue: #6796ff;
+@dark-blue: #202029;
+@green: #1ef427;
+@light-green: #6be270;
+@dark-green: #021001;
+
+@purple: #ce80ff;
+@light-purple: #d5c5ff;
+@turquoise: #13ddf7;
+@jade: #00ffb1;
+@yellow: #f4ed41;
+
+@pink: #fc1376; 
+@light-pink: #db89f4;
+@orange: #ff8000;
+
+@white: #ffffff;
+@bone-white: #edf4e3;
+
+@comment: #9b8f8b;
+@error: #dc322f;
+@background: #14151f;
+
+
+// cm-m-xml             : html plain text
+.cm-m-xml { color: @bone-white; }
 
 /* cm-keyword        : var, function, !important */
 /* cm-tag            : HTML elements */
 /* cm-variable       : $, i */
-.cm-keyword, .cm-tag, .cm-variable { color: #f926b0; }
+.cm-keyword, .cm-tag, .cm-variable { color: @pink; }
 
 /* cm-bracket        : html < </ > */
-.cm-bracket { color: #26f1f9; }
+.cm-bracket { color: @blue; }
+
 
 /* cm-atom           : #id */
 /* cm-number         : property values */
-.cm-number, .cm-atom, .cm-string-2 { color: #fff844; }
+.cm-number, .cm-atom, .cm-string-2 { color: @yellow; }
 
 /* cm-number         : number, boolens */
-.cm-m-javascript.cm-number { color: #ff4444; }
+.cm-m-javascript.cm-number { color: @red; }
 
 /* cm-attribute      : class="" id="" */
-.cm-m-javascript.cm-variable, .cm-attribute { color: #ffffff; }
+.cm-attribute { color: @turquoise; }
+.cm-m-javascript.cm-variable { color: @white; background-color: @dark-green }
 
 /* cm-variable-3     : :after */
 /* cm-operator       : js operators, CSS colons */
-.cm-variable-3 { color: #b2b4f0; }
-.cm-operator { color: #db89f4; }
+.cm-variable-3 { color: @light-purple; }
+.cm-operator { color: @jade; }
 
 /* cm-qualifier      : .box */
+.cm-qualifier { color: @turquoise; }
+
 /* cm-meta           : @font-face */
 /* cm-builtin        : define, substr, const */
 /* cm-property       : getElementbyId, CSS properties */
-.cm-qualifier, .cm-builtin, .cm-meta, .cm-property { color: #38e0ff; }
+.cm-builtin, .cm-meta, .cm-property { color: @turquoise; }
 
 /* cm-string         : "string" */
-.cm-string { color: #ff8000; }
+.cm-string { color: @purple; }
 
 /* cm-string-2       : some CSS values */
-.cm-string-2 { color: #ff8000; }
+.cm-string-2 { color: @orange; }
 
 /* cm-variable-2     : for key in [this], Markdown li */
-.cm-variable-2 { color: #e9fa18; }
+.cm-variable-2 { color: @green; }
 
 /* cm-comment        : // comments */
-.cm-comment { color: #8c8c8c; }
+.cm-comment { color: @comment; }
 
 /* cm-def            : @include, [this] */
-.cm-def, .cm-m-xml.cm-string, .cm-m-css.cm-property { color: #24e22b; }
+.cm-def, .cm-m-xml.cm-string, .cm-m-css.cm-property { color: @yellow; }
 
 /* cm-matchhighlight : Match Highlighter (https://github.com/gintau/bracket-match-highlighter) */
 .cm-matchhighlight { background-color: #333; }
 
 /* cm-error          : color : #4444; */
-.cm-error { color: #dc322f; }
+.cm-error { color: @error; }
 
 .CodeMirror, .CodeMirror-scroll {
-    background-color: #030517;
+    background-color: @background;
     color: #F8F8F2;
 }
 
@@ -84,7 +121,7 @@
     color: #000;
 }
 .CodeMirror-code div:nth-child(odd) .CodeMirror-gutter-wrapper {
-    background-color: #202029;
+    background-color: @dark-blue;
 }
 
 .CodeMirror-linenumber { color: #767676; }
