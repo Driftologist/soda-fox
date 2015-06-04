@@ -51,7 +51,8 @@
 
 @comment: #9b8f8b;
 @error: #dc322f;
-@background: #14151f;
+@background: #151719;
+@inline-background: #24323b;
 
 
 // cm-m-xml             : html plain text
@@ -75,7 +76,7 @@
 
 /* cm-attribute      : class="" id="" */
 .cm-attribute { color: @turquoise; }
-.cm-m-javascript.cm-variable { color: @white; background-color: @dark-green }
+.cm-m-javascript.cm-variable { color: @white; }
 
 /* cm-variable-3     : :after */
 /* cm-operator       : js operators, CSS colons */
@@ -97,13 +98,13 @@
 .cm-string-2 { color: @orange; }
 
 /* cm-variable-2     : for key in [this], Markdown li */
-.cm-variable-2 { color: @green; }
+.cm-variable-2, .cm-m-xml.cm-string { color: @green; }
 
 /* cm-comment        : // comments */
 .cm-comment { color: @comment; }
 
 /* cm-def            : @include, [this] */
-.cm-def, .cm-m-xml.cm-string, .cm-m-css.cm-property { color: @yellow; }
+.cm-def, .cm-m-css.cm-property { color: @yellow; }
 
 /* cm-matchhighlight : Match Highlighter (https://github.com/gintau/bracket-match-highlighter) */
 .cm-matchhighlight { background-color: #333; }
@@ -130,6 +131,9 @@
 .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt,
 .inline-widget .CodeMirror-gutter-elt { 
     background: #3C3F41;
+}
+.CodeMirror-linewidget .inline-widget {
+    background-color: @inline-background;
 }
 
 .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt { color: #F8F8F2; }
