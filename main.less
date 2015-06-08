@@ -56,56 +56,86 @@
 
 
 // cm-m-xml             : html plain text
-.cm-m-xml { color: @bone-white; }
+.cm-m-xml {
+    color: @bone-white;
+}
 
 /* cm-keyword        : var, function, !important */
 /* cm-tag            : HTML elements */
 /* cm-variable       : $, i */
-.cm-keyword, .cm-tag, .cm-variable { color: @pink; }
+.cm-keyword,
+.cm-tag,
+.cm-variable {
+    color: @pink;
+}
 
 /* cm-bracket        : html < </ > */
-.cm-bracket { color: @blue; }
+.cm-bracket {
+    color: @blue;
+}
 
 
 /* cm-atom           : #id */
 /* cm-number         : property values */
-.cm-number, .cm-atom, .cm-string-2 { color: @purple; }
+.cm-number,
+.cm-atom,
+.cm-string-2 {
+    color: @purple;
+}
 
 /* cm-number         : number, boolens */
-.cm-m-javascript.cm-number { color: @red; }
+.cm-m-javascript.cm-number {
+    color: @red;
+}
 
 /* cm-attribute      : class="" id="" */
-.cm-attribute { color: @turquoise; }
-.cm-m-javascript.cm-variable { color: @white; }
-
-/* cm-variable-3     : :after */
-/* cm-operator       : js operators, CSS colons */
-.cm-variable-3 { color: @light-purple; }
-.cm-operator { color: @jade; }
-
 /* cm-qualifier      : .box */
-.cm-qualifier { color: @turquoise; }
-
 /* cm-meta           : @font-face */
 /* cm-builtin        : define, substr, const */
 /* cm-property       : getElementbyId, CSS properties */
-.cm-builtin, .cm-meta, .cm-property { color: @turquoise; }
+.cm-builtin,
+.cm-meta,
+.cm-property,
+.cm-attribute,
+.cm-qualifier { 
+    color: @turquoise;
+}
 
+/* cm-variable-3     : :after */
+.cm-variable-3 {
+    color: @light-purple;
+}
+/* cm-operator       : js operators, CSS colons */
+.cm-operator {
+    color: @jade;
+}
 /* cm-string         : "string" */
-.cm-string { color: @purple; }
+.cm-string {
+    color: @purple;
+}
 
 /* cm-string-2       : some CSS values */
-.cm-string-2 { color: @orange; }
+.cm-string-2 {
+    color: @orange;
+}
 
 /* cm-variable-2     : for key in [this], Markdown li */
-.cm-variable-2, .cm-m-xml.cm-string { color: @green; }
-.cm-m-css.cm-variable-2 { color: @yellow; }
-.cm-m-css.cm-variable-3 { color: @blue; }
+.cm-variable-2 {
+    color: @green;
+}
+/* cm-def            : @include, [this] */
+.cm-m-css.cm-variable-2 {
+    color: @yellow;
+}
+.cm-m-css.cm-variable-3 {
+    color: @blue;
+}
 
 /* cm-comment        : // comments */
-.cm-comment { color: @comment; }
+.cm-comment {
+    color: @comment;
+}
 
-/* cm-def            : @include, [this] */
 .cm-def { color: @yellow; }
 .cm-m-css.cm-property { color: @green; }
 
@@ -114,6 +144,41 @@
 
 /* cm-error          : color : #4444; */
 .cm-error { color: @error; }
+
+// js only style
+
+.cm-m-javascript.cm-variable {
+    color: @white;
+}
+
+// css only styles
+
+
+// html only styles
+
+.cm-m-xml.cm-string {
+    color: @green;
+}
+
+// python only styles
+
+.cm-m-python.cm-keyword {
+    color: @pink;
+}
+.cm-m-python.cm-variable {
+    color: @yellow;
+}
+.cm-m-python.cm-meta {
+    color: @turquoise;
+}
+.cm-m-python.cm-builtin {
+    color: @red;
+}
+.cm-m-python.cm-def {
+    color: @green;
+}
+
+// Code mirror styles
 
 .CodeMirror, .CodeMirror-scroll {
     background-color: @background;
