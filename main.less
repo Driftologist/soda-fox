@@ -84,9 +84,6 @@
 }
 
 /* cm-number         : number, boolens */
-.cm-m-javascript.cm-number {
-    color: @red;
-}
 
 /* cm-attribute      : class="" id="" */
 /* cm-qualifier      : .box */
@@ -124,12 +121,6 @@
     color: @green;
 }
 /* cm-def            : @include, [this] */
-.cm-m-css.cm-variable-2 {
-    color: @yellow;
-}
-.cm-m-css.cm-variable-3 {
-    color: @blue;
-}
 
 /* cm-comment        : // comments */
 .cm-comment {
@@ -137,27 +128,51 @@
 }
 
 .cm-def { color: @yellow; }
-.cm-m-css.cm-property { color: @green; }
 
 /* cm-matchhighlight : Match Highlighter (https://github.com/gintau/bracket-match-highlighter) */
 .cm-matchhighlight { background-color: #333; }
 
 /* cm-error          : color : #4444; */
-.cm-error { color: @error; }
+.cm-error {
+    color: @error;
+}
 
 // js only style
 
 .cm-m-javascript.cm-variable {
     color: @white;
 }
+.cm-m-javascript.cm-number {
+    color: @red;
+}
+
+// JSON
+.cm-m-javascript.cm-string.cm-property {
+    color: @turquoise;
+}
 
 // css only styles
 
+.cm-m-css.cm-property {
+    color: @green;
+}
+.cm-m-css.cm-variable-2 {
+    color: @yellow;
+}
+.cm-m-css.cm-variable-3 {
+    color: @blue;
+}
 
 // html only styles
 
 .cm-m-xml.cm-string {
     color: @green;
+}
+
+// Django styles
+
+.cm-m-xml.cm-keyword {
+    color: @blue;
 }
 
 // python only styles
